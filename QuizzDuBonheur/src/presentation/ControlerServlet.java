@@ -54,10 +54,15 @@ public class ControlerServlet extends HttpServlet {
 			}
 
 		} else {
+			
+			//J'ai le choix entre différents thèmes
+			String theme = request.getParameter("theme");
+			
+			
 			// Je suis loggué j'execute mon quizz
 			Quizz quizz = Factory.getQuizz();
 			try {
-				quizz = QuizzDAOImpl.getInstance().getQuestions("histoire");
+				quizz = QuizzDAOImpl.getInstance().getQuestions(theme);
 			} catch (DBExceptions e2) {
 				// TODO Auto-generated catch block
 				e2.printStackTrace();

@@ -6,12 +6,18 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="style_annuaire.css"/>
-		<script defer type="text/javascript" src="model.js"></script>
+		<script defer type="text/javascript" src="script.js"></script>
 		<title>Insert title here</title>
 	</head>
 	<body>
+
 	<form action="ControlerServlet" method="get">
-		<input type="text" name="theme" value="histoire" />
+		<select name="theme">
+			<option>histoire</option>
+			<option>geographie</option>
+		</select>
+			<input type="submit" name="choisir" value="Choisir" />
+
 		<c:if test="${bean.theme}">
 			<p>${bean.theme}</p>
 		</c:if>
@@ -25,7 +31,7 @@
 			<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep2}"id="${i.mauv_rep2}" />	<label for="${i.mauv_rep2}"><c:out value="${i.mauv_rep2}" /></label><br />
 			<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep3}"id="${i.mauv_rep3}" />	<label for="${i.mauv_rep3}"><c:out value="${i.mauv_rep3}" /></label><br />
 		</c:forEach>
-		<input type="submit" value="Valider" />
+		<input type="submit" value="Valider" onclick="validator()"/>
 		
 	</form>
 </body>
