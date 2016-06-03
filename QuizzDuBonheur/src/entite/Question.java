@@ -2,7 +2,7 @@ package entite;
 
 public class Question {
 
-	private String intitulé;
+	private String intitule;
 	private String bonne_rep;
 	private String mauv_rep1;
 	private String mauv_rep2;
@@ -12,9 +12,9 @@ public class Question {
 
 	}
 	
-	Question(String intitulé, String bonne_rep, String mauv_rep1, String mauv_rep2, String mauv_rep3) {
+	Question(String intitule, String bonne_rep, String mauv_rep1, String mauv_rep2, String mauv_rep3) {
 		super();
-		this.intitulé = intitulé;
+		this.intitule = intitule;
 		this.bonne_rep = bonne_rep;
 		this.mauv_rep1 = mauv_rep1;
 		this.mauv_rep2 = mauv_rep2;
@@ -24,12 +24,12 @@ public class Question {
 
 
 
-	public String getIntitulé() {
-		return intitulé;
+	public String getIntitule() {
+		return intitule;
 	}
 
-	public void setIntitulé(String intitulé) {
-		this.intitulé = intitulé;
+	public void setIntitule(String intitule) {
+		this.intitule = intitule;
 	}
 
 	public String getBonne_rep() {
@@ -66,7 +66,7 @@ public class Question {
 
 	@Override
 	public String toString() {
-		return "Question [intitulé=" + intitulé + ", bonne_rep=" + bonne_rep + ", mauv_rep1=" + mauv_rep1
+		return "Question [intitule=" + intitule + ", bonne_rep=" + bonne_rep + ", mauv_rep1=" + mauv_rep1
 				+ ", mauv_rep2=" + mauv_rep2 + ", mauv_rep3=" + mauv_rep3 + "]";
 	}
 

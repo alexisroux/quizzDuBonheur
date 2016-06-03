@@ -1,13 +1,20 @@
 package entite;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Quizz {
-	List <Question> liste;
-	String theme;
+	private List <Question> liste;
+	private String theme;
 	
 	Quizz() {
-		// TODO Auto-generated constructor stub
+		liste = new ArrayList<Question>();
+	}
+
+	Quizz( String theme) {
+		super();
+		this.liste = new ArrayList<Question>();
+		this.theme = theme;
 	}
 
 	Quizz(List<Question> liste, String theme) {
