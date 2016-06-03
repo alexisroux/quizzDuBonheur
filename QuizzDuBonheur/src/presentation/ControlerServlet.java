@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import entite.Factory;
-import entite.Question;
 
 /**
  * Servlet implementation class Servlet
