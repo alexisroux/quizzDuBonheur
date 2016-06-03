@@ -29,26 +29,48 @@ public class ControlerServlet extends HttpServlet {
 	}
 
 	/**
+	 * @throws IOException 
+	 * @throws ServletException 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-		
-		Quizz quizz = Factory.getQuizz();
-		try {
-			quizz = QuizzDAOImpl.getInstance().getQuestions("histoire");
-		} catch (DBExceptions e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-		request.setAttribute("bean",quizz);
-		
-		try {
-			request.getRequestDispatcher("/vue.jsp").forward(request, response);
-		} catch (ServletException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		// Est ce que je suis loggué ?
+		if (request.getSession().getAttribute("login") == null) {
+			// Je ne suis pas loggué
+
+			// Est ce que je reviens de mon écran de loggin
+			if (request.getParameter("login") == null) {
+				// Je lance l'écran
+				
+					request.getRequestDispatcher("loggin.jsp").forward(request, response);
+				
+			} else {
+				// mettre l'information en session
+				request.getSession().setAttribute("login", request.getParameter("login"));
+				request.getRequestDispatcher("ControlerServlet").forward(request, response);
+			
+			}
+
+		} else {
+			// Je suis loggué j'execute mon quizz
+			Quizz quizz = Factory.getQuizz();
+			try {
+				quizz = QuizzDAOImpl.getInstance().getQuestions("histoire");
+			} catch (DBExceptions e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
+
+			request.setAttribute("bean", quizz);
+
+			try {
+				request.getRequestDispatcher("/vue.jsp").forward(request, response);
+			} catch (ServletException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 

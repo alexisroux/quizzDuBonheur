@@ -12,7 +12,7 @@
 <p>Ouech gros viens tester tes connaissances ! Choisis un pseudo et c'est parti !</p>
 <form action="ControlerServlet">
 	nom : <input type="text" name = "login"/>
-	<input type="button" value="Play!"/>
+	<input type="submit" value="Play!"/>
 </form>
 </div>
 </body>
