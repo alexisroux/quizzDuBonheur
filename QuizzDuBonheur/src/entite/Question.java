@@ -63,10 +63,7 @@ public class Question {
 
 	@Override
 	public String toString() {
-		return "Question [intitulé=" + intitule + ", bonne_rep=" + bonne_rep + ", mauv_rep1=" + mauv_rep1
-				+ ", mauv_rep2=" + mauv_rep2 + ", mauv_rep3=" + mauv_rep3 + "]";
+
+		return "Question [intitule=" + intitule + ", bonne_rep=" + bonne_rep + ", mauv_rep1=" + mauv_rep1 + ", mauv_rep2=" + mauv_rep2 + ", mauv_rep3=" + mauv_rep3 + "]";
 	}
-
-	
-
 }
