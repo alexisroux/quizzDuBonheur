@@ -13,13 +13,10 @@ import entite.Quizz;
 
 public class QuizzDAOImpl implements QuizzDAO {
 	
-	private String DBurl="";
-    public String user="";
-    public String password="";
     private Connection con = null;
     
     //Constructeurs
-    public QuizzDAOImpl() {
+    QuizzDAOImpl() {
 		super();
 	}
 

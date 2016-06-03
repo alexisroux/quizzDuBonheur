@@ -8,7 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import accesdonnees.DBExceptions;
+import accesdonnees.QuizzDAOImpl;
 import entite.Factory;
+import entite.Quizz;
 
 /**
  * Servlet implementation class Servlet
@@ -30,8 +33,16 @@ public class ControlerServlet extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+		
+		Quizz quizz = Factory.getQuizz();
+		try {
+			quizz = QuizzDAOImpl.getInstance().getQuestions("histoire");
+		} catch (DBExceptions e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 
-		request.setAttribute("bean", Factory.getQuizz("history"));
+		request.setAttribute("bean",quizz);
 		
 		try {
 			request.getRequestDispatcher("/vue.jsp").forward(request, response);
