@@ -23,5 +23,10 @@ public class Factory {
 	public static Quizz getQuizz(String theme) {
 		Quizz q = new Quizz(theme);
 		return q;
+	} 
+	
+	public static Quizz getQuizz (List<Question> liste, String theme) {
+		Quizz q = new Quizz(liste, theme);
+		return q;
 	}
 }
