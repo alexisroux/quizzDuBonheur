@@ -10,7 +10,7 @@
 		<title>Le quizz du bonheur</title>
 	</head>
 	<body>
-
+	<div id = choix>
 	<form action="ControlerServlet" method="get">
 	<p> Choisis ton theme ${login} : </p>
 	<div class = "styled-select"> 
@@ -20,7 +20,7 @@
 		</select>
 		</div>
 			<input type="submit" name="choisir" value="Choisir" />
-
+</div>
 
 		<c:forEach var="i" items="${bean.liste}">
 			<p>

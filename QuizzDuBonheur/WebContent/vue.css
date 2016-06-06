@@ -1,4 +1,5 @@
 @CHARSET "ISO-8859-1";
+
 body {
 background-color : #7D7B85;
 }
@@ -8,18 +9,19 @@ font-family :"verdana";
 }
 
 input[type=submit]{
+margin-top : 20px;
 border-radius : 10px;
 }
 
 input[type=submit]:hover{
-background-color : #F7E115;
+background-color : #65BBFC;
 }
 
 label {
     display: block;
     cursor: pointer;
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
     margin-right: 15px;
     font-size: 14px;
     font-style: italic;
@@ -37,19 +39,20 @@ label:before {
     height: 16px;
     position: absolute;
     left: 5px;
-    bottom: 5px;
+    bottom: 4px;
     background-color: #65BBFC;
     box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 
 input[type=radio]:checked + label:before {
     content: "\2022";
     color: #F513F9;
-    font-size: 30px;
-    text-align: center;
-    line-height: 18px;
+    font-size: 18px;
+   	margin-left : 3px;
+   	text-align :center;
+    line-height: 12px;
   
 }
 
@@ -66,24 +69,32 @@ width : 300px;
 background-color : white;
 item-align : center;
 
+
 }
 
 .styled-select {
    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-   height: 25px;
+   height: 28px;
    overflow: hidden;
    width: 140px;
    background-color: #FD2A2A; 
    border-radius: 20px;
-   margin-bottom : 20px;
+   margin-left : 25px;
+  
 }
 
 .styled-select select {
    background: transparent;
    border: none;
    font-size: 14px;
-   height: 25px;
+   height: 28px;
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
    width: 168px;
     color: #000;
+}
+
+#choix{
+	display : flex;
+	justify-content: center;
+	text-align : center;
 }
