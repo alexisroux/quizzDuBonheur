@@ -17,10 +17,11 @@
 		<select name="theme">
 			<option>histoire</option>
 			<option>geographie</option>
+			<option>culture</option>
 		</select>
 		</div>
 			<input type="submit" name="choisir" value="Choisir" />
-</div>
+		</div>
 
 		<c:forEach var="i" items="${bean.liste}">
 			<p>
