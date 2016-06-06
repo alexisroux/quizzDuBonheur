@@ -9,7 +9,7 @@ border-radius : 10px;
 }
 
 input[type=submit]:hover{
-background-color : #f711fd;
+background-color : #F7E115;
 }
 
 label {
@@ -33,7 +33,7 @@ label:before {
     width: 16px;
     height: 16px;
     position: absolute;
-    left: 0;
+    left: 5px;
     bottom: 5px;
     background-color: #65BBFC;
     box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
@@ -53,4 +53,15 @@ input[type=radio]:checked + label:before {
 input[type=radio]:checked + label {
 font-weight : bold;
   
+}
+
+#radioZone {
+padding : 15px;
+border : red 1px solid;
+border-radius : 10px;
+margin-right : 550px;
+margin-bottom : 20px;
+background-color : white;
+item-align : center;
+
 }
