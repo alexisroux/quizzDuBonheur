@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="vue.css"/>
 		<script defer type="text/javascript" src="script.js"></script>
-		<title>Insert title here</title>
+		<title>Le quizz du bonheur</title>
 	</head>
 	<body>
 
@@ -34,7 +34,6 @@
 			</section>
 		</c:forEach>
 		<input type="submit" value="Valider" onclick="validator()"/>
-		
 	</form>
 </body>
 </html>
