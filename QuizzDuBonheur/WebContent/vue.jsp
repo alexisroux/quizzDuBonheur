@@ -12,15 +12,15 @@
 	<body>
 
 	<form action="ControlerServlet" method="get">
+	<p> Choisis ton theme ${login} : </p>
+	<div class = "styled-select"> 
 		<select name="theme">
 			<option>histoire</option>
 			<option>geographie</option>
 		</select>
+		</div>
 			<input type="submit" name="choisir" value="Choisir" />
 
-		<c:if test="${bean.theme}">
-			<p>${bean.theme}</p>
-		</c:if>
 
 		<c:forEach var="i" items="${bean.liste}">
 			<p>

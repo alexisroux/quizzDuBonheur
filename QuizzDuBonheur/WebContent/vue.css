@@ -3,6 +3,9 @@ body {
 background-color : #7D7B85;
 }
 
+*{
+font-family :"verdana";	
+}
 
 input[type=submit]{
 border-radius : 10px;
@@ -59,9 +62,28 @@ font-weight : bold;
 padding : 15px;
 border : red 1px solid;
 border-radius : 10px;
-margin-right : 550px;
-margin-bottom : 20px;
+width : 300px;
 background-color : white;
 item-align : center;
 
+}
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 25px;
+   overflow: hidden;
+   width: 140px;
+   background-color: #FD2A2A; 
+   border-radius: 20px;
+   margin-bottom : 20px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 25px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 168px;
+    color: #000;
 }

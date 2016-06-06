@@ -1,6 +1,8 @@
 @CHARSET "ISO-8859-1";
 
-
+*{
+font-family :"verdana";	
+}
 body {
 	display : flex;
 	justify-content: space-around;
@@ -28,7 +30,7 @@ input[type=text]:focus{
 }
 
 input[type=submit]{
-border-radius : 5px;
+border-radius : 10px;
 }
 
 input[type=submit]:hover{
