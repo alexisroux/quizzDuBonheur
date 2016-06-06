@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="style_annuaire.css"/>
+		<link rel="stylesheet" type="text/css" href="vue.css"/>
 		<script defer type="text/javascript" src="script.js"></script>
 		<title>Insert title here</title>
 	</head>
@@ -26,10 +26,12 @@
 			<p>
 				<c:out value="${i.intitule}" />
 			</p>
-			<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.bonne_rep}"id="${i.bonne_rep}" />  <label for="${i.bonne_rep}"><c:out value="${i.bonne_rep}" /></label><br />
-			<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep1}"id="${i.mauv_rep1}" />	<label for="${i.mauv_rep1}"><c:out value="${i.mauv_rep1}" /></label><br />
-			<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep2}"id="${i.mauv_rep2}" />	<label for="${i.mauv_rep2}"><c:out value="${i.mauv_rep2}" /></label><br />
-			<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep3}"id="${i.mauv_rep3}" />	<label for="${i.mauv_rep3}"><c:out value="${i.mauv_rep3}" /></label><br />
+			<section id="radioZone">
+				<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.bonne_rep}"id="${i.bonne_rep}" class="bonne_rep" />  <label for="${i.bonne_rep}"><c:out value="${i.bonne_rep}" /></label><br />
+				<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep1}"id="${i.mauv_rep1}" class="mauv_rep1"/>	<label for="${i.mauv_rep1}"><c:out value="${i.mauv_rep1}" /></label><br />
+				<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep2}"id="${i.mauv_rep2}" class="mauv_rep2"/>	<label for="${i.mauv_rep2}"><c:out value="${i.mauv_rep2}" /></label><br />
+				<input onclick="this.style='background-color:green;'" type="radio" name="reponse${i}" value="${i.mauv_rep3}"id="${i.mauv_rep3}" class="mauv_rep3" />	<label for="${i.mauv_rep3}"><c:out value="${i.mauv_rep3}" /></label><br />
+			</section>
 		</c:forEach>
 		<input type="submit" value="Valider" onclick="validator()"/>
 		
