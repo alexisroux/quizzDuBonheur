@@ -13,9 +13,12 @@ function validator(){
 			nbReponsesOk ++;
 		}
 	}
-	
-	alert("Votre score : " + nbReponsesOk+"/20");
+	//affichage du résultat
+	if(nbReponsesOk <=10){
+		alert("AHAHAHAH la honte ! Vous avez : "+nbReponsesOk+"/20, vous êtes nul !");
+	} else if (nbReponsesOk > 10){
+		alert("Bravo ! Vous avez : "+nbReponsesOk+"/20, vous déchirez !");
+	}
 	return nbReponsesOk;
-	
 	
 }
