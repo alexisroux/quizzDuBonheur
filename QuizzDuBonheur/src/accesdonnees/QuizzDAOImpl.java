@@ -86,12 +86,12 @@ public class QuizzDAOImpl implements QuizzDAO {
     		stmt = this.con.prepareStatement(query);
 			stmt.setString(1, theme);
 			resultat = stmt.executeQuery();
-
-			while (resultat.next()) {
-				
+			int i = 0;
+			while (resultat.next() && i<20) {	
 				lstQuestion.add(Factory.getQuestion(resultat.getString("intitule"),resultat.getString("reponse"),resultat.getString("mauvaise1"),resultat.getString("mauvaise2"),resultat.getString("mauvaise3")));
-				
+				i ++;
 			}
+			
 			//création de la liste de 20 questions du quizz
 			quizz.setListe(lstQuestion);
 				
