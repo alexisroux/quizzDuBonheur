@@ -1,7 +1,11 @@
 @CHARSET "ISO-8859-1";
+body {
+background-color : #7D7B85;
+}
+
 
 input[type=submit]{
-border-radius : 5px;
+border-radius : 10px;
 }
 
 input[type=submit]:hover{
@@ -14,13 +18,15 @@ label {
     position: relative;
     padding-left: 25px;
     margin-right: 15px;
-    font-size: 13px;
+    font-size: 14px;
+    font-style: italic;
+ 
 }
 
 input[type=radio] {
     display: none;
 }
-	
+    
 label:before {
     content: "";
     display: block;
@@ -29,18 +35,22 @@ label:before {
     position: absolute;
     left: 0;
     bottom: 5px;
-    background-color: #2737E7;
+    background-color: #65BBFC;
     box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    border-radius: 15px;
 }
 
-.radio label:before {
-    border-radius: 8px;
-}
 
 input[type=radio]:checked + label:before {
     content: "\2022";
-    color: #FF06A4;
+    color: #F513F9;
     font-size: 30px;
     text-align: center;
     line-height: 18px;
+  
+}
+
+input[type=radio]:checked + label {
+font-weight : bold;
+  
 }
